@@ -1,6 +1,3 @@
-
-
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -226,7 +223,6 @@ public class cv {
 		 File f = new File(fileName);
 		 ArrayList<Integer> bytes = new ArrayList<Integer>();
 		
-		
 		 FileInputStream in = null;	
 		 in = new FileInputStream(fileName);
 		 
@@ -236,23 +232,6 @@ public class cv {
         }
 		 
 		 return bytes;
-	}
-	
-	public static void WriteOut(char[][] data,String name) throws IOException
-	{
-		PrintWriter out = new PrintWriter(name);
-		
-		for(int y = 0 ; y < data.length;y++)
-		{
-			for(int x = 0; x<data.length;x++)
-			{
-				out.print(data[y][x]);
-			}
-			
-			out.println();
-		}
-		out.close();
-		
 	}
 	
 	public static void WriteOut(ArrayList<Integer> data,String name) throws IOException
@@ -270,6 +249,4 @@ public class cv {
 		out.flush();
 		out.close();
 	}
-	
-
 }
