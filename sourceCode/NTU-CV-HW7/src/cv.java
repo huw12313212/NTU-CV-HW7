@@ -20,12 +20,17 @@ public class cv {
 		 
 		 ArrayList<Integer> origin = binerized;
 		 ArrayList<Integer> result;
-		 
+		 int count = 0;
 		 result = thinning(origin,headerLength,imageWidth,imageHeight);
+		 
+		// WriteOut(result,"./assets/thin0.im");
+		 
 		 while(!identical(result,origin))
 		 {
 			 origin = copy(result);
 			 result = thinning(origin,headerLength,imageWidth,imageHeight);
+			 System.out.println(count++);
+			 //WriteOut(result,"./assets/thin"+count+".im");
 		 }
 		 
 		 WriteOut(result,"./assets/result.im");
